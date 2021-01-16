@@ -1,0 +1,83 @@
+html, body, #root {
+        height: 100%;
+        margin: 0px;
+}
+	
+.auto-complete{
+	width : 100%;
+	position:relative;
+}
+
+.auto-complete-button, .auto-complete-button:focus{
+	width: 30px;
+	height: 30px;
+	font-weight: bold;
+	color : #000;
+	background-color : rgb(172, 172, 52);
+	transform : rotate(90deg);
+	outline : none;
+	border : 0;
+	font-family : Helvetica, Sans Serif;
+    position: absolute;	
+	top: 0px;
+    right: 31px;
+}
+
+.auto-complete-input, .auto-complete-input:focus{
+	height: 30px;
+	color : rgb(39, 39, 39);
+	border : solid 2px rgb(199, 200, 199);
+	border-radius :  2px;
+	width:calc(100% - 30px);
+	padding-right : 32px;
+	outline : none;
+}
+
+.auto-complete.open .option-lists{
+	width:calc(100% - 30px);
+    position: absolute;
+    top: 29px;
+    border: solid 4px rgb(172, 172, 52);
+    background: #fff;
+	border-bottom-right-radius :  4px;
+	border-bottom-left-radius : 4px;
+	border-top : 0;
+	height :  220px;
+	overflow-y : auto;
+	border-top: solid 2px rgb(199, 200, 199)
+}
+
+.option-lists ul{
+	list-style : none;
+	margin-left : -30px;
+}
+
+.option-lists ul li {
+	padding :  3px;
+	color : #000;
+	font-family : Helvetica, Sans Serif;
+	cursor:pointer;
+}
+
+.option-lists ul li:hover{
+	padding :  3px;
+	background-color : rgb(241, 242, 242);
+	font-weight: bold;
+}
+
+.option-lists ul li.active, .option-lists ul li.active:hover{
+	background-color : rgb(241, 242, 242);
+}
+
+.option-lists ul li:focus{
+	border : dotted 1px red;
+	outline : none;
+}
+
+.auto-complete.open .auto-complete-input, 
+.auto-complete.open .auto-complete-input:focus{
+	border: solid 4px rgb(172, 172, 52);
+	border-top-right-radius :  4px;
+	border-top-left-radius : 4px;
+	border-bottom : 0;
+}
